@@ -11,7 +11,7 @@
 #include <climits>
 #include <csignal>
 #include <windows.h>
-//B1 change
+//nym's lab1
 #define Max_Num 0x3ff
 #define Max_iter 1000
 volatile bool stopTraversal = false;
