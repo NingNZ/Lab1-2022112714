@@ -67,35 +67,38 @@ public class BlackGraphTest {
         new HashSet<>(expectRes).equals(new HashSet<>(actualRes)));
     return;
   }
-
   @Test
   public void testcalcShortestPath4() {
     System.out.println("testcase 4:");
+    ArrayList<String> actualRes = graph.calcShortestPath("new", "new");
+    ArrayList<String> expectRes = new ArrayList<>();
+    expectRes.add("new -> new");
+    System.out.println("actualRes: " + actualRes);
+    System.out.println("expectRes: " + expectRes);
+    assertEquals("test wrong in testcalcShortestPath4",
+        expectRes, actualRes);
+    return;
+  }
+
+  @Test
+  public void testcalcShortestPath5() {
+    System.out.println("testcase 5:");
     ArrayList<String> actualRes = graph.calcShortestPath(null, null);
     ArrayList<String> expectRes = null;
-    assertEquals("test wrong in testcalcShortestPath4",
+    System.out.println("actualRes: " + actualRes);
+    System.out.println("expectRes: " + expectRes);
+    assertEquals("test wrong in testcalcShortestPath5",
         expectRes, actualRes);
     return;
   }
   
   @Test
-  public void testcalcShortestPath5() {
-    System.out.println("testcase 5:");
+  public void testcalcShortestPath6() {
+    System.out.println("testcase 6:");
     ArrayList<String> actualRes = graph.calcShortestPath("new", null);
     ArrayList<String> expectRes = null;
     System.out.println("actualRes: " + actualRes);
-    System.out.println("expectRes: " +expectRes);
-    assertEquals("test wrong in testcalcShortestPath5",
-        expectRes, actualRes); 
-    return;
-  }
-  @Test
-  public void testcalcShortestPath6() {
-    System.out.println("testcase 6:");
-    ArrayList<String> actualRes = graph.calcShortestPath("newx", "andx");
-    ArrayList<String> expectRes = null;
-    System.out.println("actualRes: " + actualRes);
-    System.out.println("expectRes: " +expectRes);
+    System.out.println("expectRes: " + expectRes);
     assertEquals("test wrong in testcalcShortestPath6",
         expectRes, actualRes); 
     return;
@@ -103,11 +106,22 @@ public class BlackGraphTest {
   @Test
   public void testcalcShortestPath7() {
     System.out.println("testcase 7:");
+    ArrayList<String> actualRes = graph.calcShortestPath("newx", "andx");
+    ArrayList<String> expectRes = null;
+    System.out.println("actualRes: " + actualRes);
+    System.out.println("expectRes: " + expectRes);
+    assertEquals("test wrong in testcalcShortestPath7",
+        expectRes, actualRes); 
+    return;
+  }
+  @Test
+  public void testcalcShortestPath8() {
+    System.out.println("testcase 8:");
     ArrayList<String> actualRes = graph.calcShortestPath("new", "andx");
     ArrayList<String> expectRes = null;
     System.out.println("actualRes: " + actualRes);
-    System.out.println("expectRes: " +expectRes);
-    assertEquals("test wrong in testcalcShortestPath7",
+    System.out.println("expectRes: " + expectRes);
+    assertEquals("test wrong in testcalcShortestPath8",
         expectRes, actualRes); 
     return;
   }
