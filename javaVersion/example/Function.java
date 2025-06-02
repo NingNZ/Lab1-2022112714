@@ -66,11 +66,11 @@ class Function {
     Node pfrom = graph.findNode(word1);
     Node pto = graph.findNode(word2);
     if (pfrom == null && pto != null) {
-      System.err.println("No \"" + word1 + "\" in the graph!");
+      System.out.println("No \"" + word1 + "\" in the graph!");
     } else if (pto == null && pfrom != null) {
-      System.err.println("No \"" + word2 + "\" in the graph!");
+      System.out.println("No \"" + word2 + "\" in the graph!");
     } else if (pto == null && pfrom == null) {
-      System.err.println("No \"" + word1 + "\" and \"" + word2 + "\" in the graph!");
+      System.out.println("No \"" + word1 + "\" and \"" + word2 + "\" in the graph!");
     } else {
       ArrayList<String> bridge = graph.searchBridgeWord(word1, word2);
       if (bridge.isEmpty()) {
@@ -101,7 +101,7 @@ class Function {
     startNode = Graph.wordsFliter(startNode);
     Node start = graph.findNode(startNode);
     if (start == null) {
-      System.err.println("No \"" + startNode + "\" in the graph!");
+      System.out.println("No \"" + startNode + "\" in the graph!");
       return;
     }
 
@@ -163,7 +163,7 @@ class Function {
       endNode = Graph.wordsFliter(endNode);
       Node end = graph.findNode(endNode);
       if (end == null) {
-        System.err.println("No \"" + endNode + "\" in the graph!");
+        System.out.println("No \"" + endNode + "\" in the graph!");
         return;
       }
       if (distances.get(end) == Integer.MAX_VALUE) {

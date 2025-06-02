@@ -190,6 +190,11 @@ public class Graph {
   }
 
   public ArrayList<String> calcShortestPath(String startNode, String endNode) {
+    
+    if (startNode == null || endNode == null) {
+      System.err.println("Start or end node is null!");
+      return null;
+    }
     startNode = Graph.wordsFliter(startNode);
     Node start = this.findNode(startNode);
     endNode = Graph.wordsFliter(endNode);
